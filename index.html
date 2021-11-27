@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet"> 
+
+  <link href="./node_modules/material-icons/iconfont/material-icons.css" rel="stylesheet">
+
+  <title>Document</title>
+</head>
+<body>
+  
+  <img src="" alt="the QR code">
+
+  <div class="container">
+    <span class="input-container">
+      <label for="padding">Padding</label>
+      <input name="padding" class="padding" type="number">
+    </span>
+    
+    <span class="input-container">
+      <label for="information">QR Content</label>
+      <input name="information" class="information" type="text">
+    </span>    
+    
+    <span class="input-container">
+      <label for="formats">QR Content</label>
+      <select name="formats" id="format">
+        <option value="svg">SVG</option>
+        <option value="png">PNG</option>
+        <!-- <option value="eps">EPS</option> -->
+      </select>
+    </span>
+    
+    <span class="input-container">
+      <label for="formats">QR Color</label>
+      <input name='formats' class="color-picker" type="color">
+    </span>
+
+      
+    <span class="button-container">
+      <button class="generate-btn">Generate</button>
+      <a class="download-button" href="" download>
+        <button class="downolad-btn">
+          <span class="material-icons-outlined">cloud_download</span>          <!-- Filled -->
+        </button>
+      </a>
+      
+      <div class="toggle-theme">
+        <input type="checkbox" id="checkbox-toggle-theme">
+        <label for="checkbox-toggle-theme" class="checkbox-toggle-theme-label">  
+          <span class="ball"></span>
+          <span class="material-icons-outlined">dark_mode</span>          <!-- Filled -->
+          <span class="material-icons-outlined">light_mode</span>          <!-- Filled -->
+        </label>
+        </div>
+    </span>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

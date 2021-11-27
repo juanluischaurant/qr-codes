@@ -1,0 +1,80 @@
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Roboto';
+	margin: 45px 0;
+}
+
+.dark {
+	background-color: #292c35;
+	color: #fff;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 450px;
+}
+
+.input-container {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+}
+.button-container {
+	min-width: 120px;
+	display: flex;
+	flex-direction: row;
+}
+
+.button-container button {
+	margin-right: 10px;
+	padding: 0 15px;
+}
+
+img {
+	width: 250px;
+}
+
+.toggle-theme {
+	background-color: rgb(81, 80, 80);
+	color: white;
+
+	border-radius: 50px;
+	width: 55px;
+
+	box-sizing: border-box;
+
+	display: flex;
+	align-items: center;
+}
+
+.checkbox-toggle-theme-label {
+	position: relative;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 100%;
+	padding: 0 2px;
+}
+
+.ball {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background-color: #fff;
+	border-radius: 50%;
+	transition: transform 0.2s linear;
+}
+
+#checkbox-toggle-theme {
+	position: absolute;
+	opacity: 0;
+}
+
+#checkbox-toggle-theme:checked + label .ball {
+	transform: translateX(26px);
+}
