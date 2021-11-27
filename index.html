@@ -17,12 +17,28 @@
 </head>
 <body>
   
+  <nav>
+    <div class="nav-inner">
+      <div class="logo">QR Generator</div>
+
+      <div class="toggle-theme">
+        <input type="checkbox" id="checkbox-toggle-theme">
+        <label for="checkbox-toggle-theme" class="checkbox-toggle-theme-label">  
+          <span class="ball"></span>
+          <i class="material-icons-outlined icons">dark_mode</i>          <!-- Filled -->
+          <i class="material-icons-outlined icons">light_mode</i>          <!-- Filled -->
+        </label>
+      </div>
+    </div>
+  </nav>
+
   <img src="" alt="the QR code">
 
   <div class="container">
+
     <span class="input-container">
       <label for="padding">Padding</label>
-      <input name="padding" class="padding" type="number">
+      <input name="padding" class="padding" type="number" min="0" max="3" step='1'>
     </span>
     
     <span class="input-container">
@@ -39,28 +55,25 @@
       </select>
     </span>
     
-    <span class="input-container">
-      <label for="formats">QR Color</label>
-      <input name='formats' class="color-picker" type="color">
+    <span class="button-container">
+      <span class="picker-container">
+        <label for="formats">QR Color</label>
+        <input name='formats' class="qr-color-picker" type="color">
+      </span>
+      <span class="picker-container">
+        <label for="formats">Bck Color</label>
+        <input name='formats' class="back-color-picker" type="color">
+      </span>
     </span>
 
       
     <span class="button-container">
-      <button class="generate-btn">Generate</button>
-      <a class="download-button" href="" download>
-        <button class="downolad-btn">
-          <span class="material-icons-outlined">cloud_download</span>          <!-- Filled -->
-        </button>
+      <a class="generate-btn">Generate</a>
+      <a class="download-btn" href="" download target="_blank">
+        <i class="material-icons-outlined">
+          cloud_download
+        </i>         <!-- Filled -->
       </a>
-      
-      <div class="toggle-theme">
-        <input type="checkbox" id="checkbox-toggle-theme">
-        <label for="checkbox-toggle-theme" class="checkbox-toggle-theme-label">  
-          <span class="ball"></span>
-          <span class="material-icons-outlined">dark_mode</span>          <!-- Filled -->
-          <span class="material-icons-outlined">light_mode</span>          <!-- Filled -->
-        </label>
-        </div>
     </span>
 
   </div>

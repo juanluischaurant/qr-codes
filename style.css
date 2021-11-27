@@ -1,15 +1,77 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	/* margin: 45px 0; */
+	margin: 0;
+
 	font-family: 'Roboto';
-	margin: 45px 0;
+	color: rgb(38, 48, 72);
+
+	background: rgb(238, 245, 255);
 }
 
-.dark {
-	background-color: #292c35;
-	color: #fff;
+.icons {
+	color: white;
 }
+
+body.dark {
+	background-color: rgb(37, 47, 71);
+	color: rgb(117, 117, 117);
+}
+
+body.dark nav .nav-inner .logo {
+	/* border-bottom: 1px solid #292c35; */
+	color: rgb(255, 255, 255);
+}
+
+body.dark .container span input {
+	color: #fff;
+	border-bottom: 1.5px solid #fff;
+}
+
+body.dark .toggle-theme {
+	background-color: rgb(45, 56, 86);
+	box-shadow: inset 0px 0px 10px rgba(4, 5, 7, 1);
+}
+
+nav {
+	width: 100%;
+	padding: 10px 0;
+	/* height: 28px; */
+
+	/* padding: 0 105px; */
+
+	display: flex;
+	flex-direction: row;
+	/* justify-content: space-between; */
+	position: sticky;
+	justify-content: center;
+
+	/* border-bottom: 1px solid #fff; */
+	margin-bottom: 35px;
+
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav-inner {
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-inner .logo {
+	font-weight: 800;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
 .container {
 	display: flex;
 	flex-direction: column;
@@ -20,6 +82,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 15px;
+	cursor: pointer;
 }
 .button-container {
 	min-width: 120px;
@@ -27,22 +90,30 @@ body {
 	flex-direction: row;
 }
 
-.button-container button {
-	margin-right: 10px;
-	padding: 0 15px;
+img {
+	width: 180px;
+	border: 6px solid white;
+	margin-bottom: 15px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-img {
-	width: 250px;
+label {
+	font-size: 12px;
+	color: rgb(37, 47, 71);
+	font-weight: 800;
+	margin-bottom: 2.5px;
+	letter-spacing: 1px;
 }
 
 .toggle-theme {
-	background-color: rgb(81, 80, 80);
+	box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);
+	cursor: pointer;
+	background-color: rgb(115, 164, 255);
 	color: white;
 
 	border-radius: 50px;
 	width: 55px;
-
+	height: 30px;
 	box-sizing: border-box;
 
 	display: flex;
@@ -50,12 +121,14 @@ img {
 }
 
 .checkbox-toggle-theme-label {
+	cursor: pointer;
 	position: relative;
 
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	margin: 0;
 
 	width: 100%;
 	padding: 0 2px;
@@ -77,4 +150,112 @@ img {
 
 #checkbox-toggle-theme:checked + label .ball {
 	transform: translateX(26px);
+}
+
+.picker-container {
+	display: flex;
+	flex-direction: column;
+}
+.picker-container:first-child {
+	margin-right: 10px;
+	margin-bottom: 15px;
+}
+
+input[type='text'],
+input[type='number'] {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1.5px solid rgb(38, 48, 72);
+	color: rgb(38, 48, 72);
+	font-family: 'Roboto';
+	font-size: 16px;
+}
+
+body.dark .container .input-container label {
+	color: rgb(255, 255, 255);
+}
+body.dark .container .button-container label {
+	color: rgb(255, 255, 255);
+}
+
+select {
+	/* A reset of styles, including removing the default dropdown arrow */
+	/* appearance: none; */
+
+	/* Additional resets for further consistency */
+	background-color: transparent;
+	border: none;
+	border-bottom: 1.5px solid rgb(38, 48, 72);
+	padding: 0 1em 0 0;
+	margin: 0;
+	width: 100%;
+	font-family: inherit;
+	font-size: inherit;
+	cursor: inherit;
+
+	/* line-height: inherit; */
+}
+select option {
+	font-family: sans-serif;
+	color: rgb(37, 47, 71);
+	background-color: rgb(238, 245, 255);
+}
+
+body.dark .container .input-container select {
+	border-bottom: 1.5px solid rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
+}
+
+body.dark .container .input-container select option {
+	color: rgb(255, 255, 255);
+	background-color: rgb(37, 47, 71);
+}
+
+input[type='color'] {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1.5px solid rgb(37, 47, 71);
+}
+
+.download-btn,
+.generate-btn {
+	background-color: transparent;
+	color: rgb(37, 47, 71);
+
+	border-radius: 50px;
+	border: 2px solid rgb(37, 47, 71);
+
+	cursor: pointer;
+
+	font-weight: 600;
+	font-family: 'Roboto';
+
+	/* width: 105px; */
+	height: 40px;
+
+	margin-right: 10px;
+	padding: 0 15px;
+
+	text-decoration: none;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.download-btn:hover,
+.generate-btn:hover {
+	background-color: rgb(37, 47, 71);
+	color: rgb(255, 255, 255);
+}
+
+.dark-btn {
+	border: 2px solid rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
+}
+
+.dark-btn:hover {
+	background-color: rgb(255, 255, 255);
+	color: rgb(37, 47, 71);
 }
