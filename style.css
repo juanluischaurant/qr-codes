@@ -24,6 +24,10 @@ body.dark {
 	color: rgb(117, 117, 117);
 }
 
+.cloud-icon-dark {
+	fill: #ffffff !important;
+}
+
 body.dark nav .nav-inner .logo {
 	/* border-bottom: 1px solid #292c35; */
 	color: rgb(255, 255, 255);
